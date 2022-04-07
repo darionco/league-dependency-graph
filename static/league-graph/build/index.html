@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>League Graph?</title>
+</head>
+<body>
+<style>
+    html,
+    body,
+    #graph-container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .checkbox {
+
+    }
+</style>
+<input type="checkbox" id="simple-deps" name="simplify dependencies" checked>
+<label for="simple-deps">Simplify dependencies</label>
+<div id="graph-container"></div>
+<script>
+    async function main() {
+        const mod = await import('./mod.js');
+    }
+
+    document.addEventListener('DOMContentLoaded', main);
+</script>
+</body>
+</html>

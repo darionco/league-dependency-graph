@@ -1,0 +1,19 @@
+modules:
+  macro:
+    - key: league-dependency-graph
+      resource: main
+      resolver:
+        function: resolver
+      title: League dependency graph
+      description: Create an interactive dependency graph using a simple table!
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/league-graph/build
+app:
+  id: ari:cloud:ecosystem::app/f44614bd-564c-4d35-ad86-25a1c28b71e5
+permissions:
+  scopes:
+    - read:content-details:confluence
